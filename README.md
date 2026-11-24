@@ -2,7 +2,7 @@ Portafolio Profesional — Angel Ortega
 
 Sitio web de portafolio personal diseñado para presentar mis proyectos de Desarrollo de Software, Automatización con Inteligencia Artificial y Soporte Técnico TI.
 
-🔗 Demo en vivo: https://aortega-devpa.github.io (actualizar con tu URL exacta tras desplegar en GitHub Pages)
+🔗 Demo en vivo: https://aortegadevpa.github.io
 
 ✨ Características Principales
 
@@ -34,15 +34,17 @@ Servicios & Despliegue: FormSubmit (formularios estáticos), GitHub Pages.
 
 🚀 Despliegue en GitHub Pages
 
-Sube index.html y README.md a un repositorio público llamado <tu-usuario>.github.io.
+Sube index.html y README.md a tu repositorio público aortegadevpa.github.io.
 
 Ve a Settings → Pages en el repositorio y verifica que la rama main esté seleccionada.
 
-Abre la URL publicada y envía un mensaje de prueba desde el formulario de contacto para activar la recepción en aortega.devpa@gmail.com.
+Abre https://aortegadevpa.github.io y envía un mensaje de prueba desde el formulario de contacto para activar la recepción en aortega.devpa@gmail.com.
 
 📬 Contacto
 
 Nombre: Angel Ortega
+
+GitHub: https://github.com/aortegadevpa
 
 Email: aortega.devpa@gmail.com
 
