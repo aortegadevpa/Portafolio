@@ -8,6 +8,7 @@
     <meta name="author" content="Angel Ortega">
     <!-- Open Graph / Vista previa al compartir enlace en WhatsApp y LinkedIn -->
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aortegadevpa.github.io/">
     <meta property="og:title" content="Angel Ortega | Desarrollador de Software & Automatización con IA">
     <meta property="og:description" content="Desarrollo Web, Aplicaciones en C#, Agentes de IA con n8n/Ollama y Soporte Técnico TI. Español, Portugués e Inglés.">
     <meta name="theme-color" content="#070b14">
@@ -138,7 +139,7 @@
 </head>
 <body class="bg-tech-grid antialiased selection:bg-cyan-500/30 selection:text-cyan-200">
 
-    <!-- Notificación Toast Flotante (Reemplaza alert()) -->
+    <!-- Notificación Toast Flotante -->
     <div id="toast-notification" role="status" aria-live="polite" class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none">
         <div class="glass-panel border-emerald-500/50 rounded-xl px-5 py-3.5 shadow-2xl flex items-center gap-3">
             <div class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0">
@@ -256,7 +257,7 @@
 
                         <!-- Enlaces sociales rápidos -->
                         <div class="flex items-center gap-4 pt-3 text-slate-400 no-print">
-                            <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm hover:text-cyan-400 transition-colors">
+                            <a href="https://github.com/aortegadevpa" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm hover:text-cyan-400 transition-colors">
                                 <i class="fa-brands fa-github text-lg"></i>
                                 <span>GitHub</span>
                             </a>
@@ -801,7 +802,7 @@
             </div>
 
             <div class="flex items-center gap-4 no-print">
-                <a href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="w-9 h-9 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-cyan-400 hover:border-cyan-500/40 transition-colors">
+                <a href="https://github.com/aortegadevpa" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="w-9 h-9 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-cyan-400 hover:border-cyan-500/40 transition-colors">
                     <i class="fa-brands fa-github"></i>
                 </a>
                 <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="w-9 h-9 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-cyan-400 hover:border-cyan-500/40 transition-colors">
@@ -814,7 +815,7 @@
         </div>
     </footer>
 
-    <!-- MODAL DE DETALLES DEL PROYECTO (Problema -> Solución -> Stack -> Arquitectura) -->
+    <!-- MODAL DE DETALLES DEL PROYECTO -->
     <div id="project-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="modal-title">
         <div class="glass-card border-slate-700 rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl transform transition-all">
             <!-- Cabecera del Modal -->
@@ -874,13 +875,11 @@
         </div>
     </div>
 
-    <!-- LÓGICA JAVASCRIPT: Traducciones Trilingües (ES/EN/PT), Modales, Validación y Portapapeles -->
+    <!-- LÓGICA JAVASCRIPT -->
     <script>
-        // Estado global del idioma actual
         let currentLang = 'es';
         let activeProjectIndex = null;
 
-        // Diccionario completo de traducciones (Español, Inglés y Portugués)
         const translations = {
             es: {
                 nav_home: "Inicio",
@@ -1151,7 +1150,6 @@
             }
         };
 
-        // Datos detallados de los 3 proyectos (Trilingüe)
         const projectsData = [
             {
                 stack: ["n8n", "Ollama 3.1 (Local LLM)", "Meta Developers Webhooks", "WhatsApp Cloud API", "Google Sheets API"],
@@ -1227,13 +1225,11 @@
             }
         ];
 
-        // Función para cambiar el idioma de toda la interfaz
         function setLanguage(lang) {
             if (!translations[lang]) return;
             currentLang = lang;
             document.documentElement.lang = lang;
 
-            // Actualizar textos estáticos con atributo data-i18n
             const elements = document.querySelectorAll('[data-i18n]');
             elements.forEach(el => {
                 const key = el.getAttribute('data-i18n');
@@ -1242,7 +1238,6 @@
                 }
             });
 
-            // Actualizar estilos visuales de los botones ES / EN / PT
             ['es', 'en', 'pt'].forEach(code => {
                 const btn = document.getElementById(`btn-lang-${code}`);
                 if (code === lang) {
@@ -1252,13 +1247,11 @@
                 }
             });
 
-            // Si el modal de proyectos está abierto, actualizar su contenido dinámicamente
             if (activeProjectIndex !== null) {
                 renderProjectModalContent(activeProjectIndex);
             }
         }
 
-        // Abrir modal de proyecto
         function openProjectModal(index) {
             activeProjectIndex = index;
             renderProjectModalContent(index);
@@ -1268,7 +1261,6 @@
             document.body.style.overflow = 'hidden';
         }
 
-        // Renderizar contenido del modal según idioma actual
         function renderProjectModalContent(index) {
             const project = projectsData[index];
             const localized = project[currentLang];
@@ -1289,7 +1281,6 @@
             });
         }
 
-        // Cerrar modal de proyecto
         function closeProjectModal() {
             const modal = document.getElementById('project-modal');
             modal.classList.add('hidden');
@@ -1298,7 +1289,6 @@
             activeProjectIndex = null;
         }
 
-        // Cerrar modal al hacer clic fuera del contenedor o presionar Escape
         document.getElementById('project-modal').addEventListener('click', (e) => {
             if (e.target.id === 'project-modal') {
                 closeProjectModal();
@@ -1311,7 +1301,6 @@
             }
         });
 
-        // Utilidad de copiado al portapapeles compatible con iFrames (execCommand fallback)
         function copyTextSafe(text) {
             const textArea = document.createElement('textarea');
             textArea.value = text;
@@ -1340,6 +1329,8 @@
                 "Angel Ortega",
                 "Desarrollador de Software & Automatización con IA",
                 "Universidad Tecnológica de Panamá (UTP)",
+                "Portafolio: https://aortegadevpa.github.io",
+                "GitHub: https://github.com/aortegadevpa",
                 "Email: aortega.devpa@gmail.com",
                 "Idiomas: Español (Nativo), Portugués (Fluido), Inglés (Profesional)",
                 "Ubicación: Panamá"
@@ -1349,9 +1340,36 @@
             showToast(t.toast_card_title, t.toast_card_msg);
         }
 
-        // Mostrar notificación toast temporal
         let toastTimeout = null;
-        // Validación en tiempo real y envío real del formulario de contacto vía FormSubmit
+        function showToast(title, message) {
+            const toast = document.getElementById('toast-notification');
+            document.getElementById('toast-title').textContent = title;
+            document.getElementById('toast-message').textContent = message;
+
+            toast.classList.remove('translate-y-24', 'opacity-0');
+            toast.classList.add('translate-y-0', 'opacity-100');
+
+            if (toastTimeout) clearTimeout(toastTimeout);
+            toastTimeout = setTimeout(() => {
+                toast.classList.remove('translate-y-0', 'opacity-100');
+                toast.classList.add('translate-y-24', 'opacity-0');
+            }, 3500);
+        }
+
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            document.querySelectorAll('.mobile-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        }
+
         const contactForm = document.getElementById('contact-form');
         if (contactForm) {
             contactForm.addEventListener('submit', async (e) => {
@@ -1371,7 +1389,6 @@
 
                 let isValid = true;
 
-                // Validar nombre
                 if (!nameInput.value.trim()) {
                     errName.classList.remove('hidden');
                     isValid = false;
@@ -1379,7 +1396,6 @@
                     errName.classList.add('hidden');
                 }
 
-                // Validar correo electrónico
                 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
                 if (!emailRegex.test(emailInput.value.trim())) {
                     errEmail.classList.remove('hidden');
@@ -1388,7 +1404,6 @@
                     errEmail.classList.add('hidden');
                 }
 
-                // Validar mensaje
                 if (msgInput.value.trim().length < 10) {
                     errMsg.classList.remove('hidden');
                     isValid = false;
@@ -1436,7 +1451,6 @@
             });
         }
 
-        // Animación de aparición suave al hacer scroll
         const observerOptions = {
             threshold: 0.12
         };
