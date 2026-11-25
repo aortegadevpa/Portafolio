@@ -762,8 +762,9 @@
             </div>
 
             <!-- Pie del Modal -->
-            <div class="px-6 py-4 bg-slate-900/80 border-t border-slate-800 flex justify-end">
-                <button type="button" onclick="closeProjectModal()" class="px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-white text-sm font-medium transition-colors" data-i18n="modal_close">
+            <div class="px-6 py-4 bg-slate-900/80 border-t border-slate-800 flex flex-wrap items-center justify-between gap-3">
+                <div id="modal-actions" class="flex flex-wrap items-center gap-2.5"></div>
+                <button type="button" onclick="closeProjectModal()" class="px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-white text-sm font-medium transition-colors ml-auto" data-i18n="modal_close">
                     Cerrar
                 </button>
             </div>
@@ -857,6 +858,8 @@
                 modal_solution_lbl: "Solución Implementada",
                 modal_arch_lbl: "Arquitectura & Flujo Técnico",
                 modal_stack_lbl: "Stack Tecnológico",
+                modal_live_demo: "Probar Demo en Vivo",
+                modal_view_repo: "Ver Repositorio",
                 modal_close: "Cerrar",
                 toast_email_title: "Correo copiado",
                 toast_email_msg: "aortega.devpa@gmail.com copiado al portapapeles.",
@@ -948,6 +951,8 @@
                 modal_solution_lbl: "Implemented Solution",
                 modal_arch_lbl: "Architecture & Technical Flow",
                 modal_stack_lbl: "Tech Stack",
+                modal_live_demo: "Live Demo",
+                modal_view_repo: "View Repository",
                 modal_close: "Close",
                 toast_email_title: "Email copied",
                 toast_email_msg: "aortega.devpa@gmail.com copied to clipboard.",
@@ -1039,6 +1044,8 @@
                 modal_solution_lbl: "Solução Implementada",
                 modal_arch_lbl: "Arquitetura & Fluxo Técnico",
                 modal_stack_lbl: "Stack Tecnológico",
+                modal_live_demo: "Ver Demo ao Vivo",
+                modal_view_repo: "Ver Repositório",
                 modal_close: "Fechar",
                 toast_email_title: "E-mail copiado",
                 toast_email_msg: "aortega.devpa@gmail.com copiado para a área de transferência.",
@@ -1077,6 +1084,8 @@
                 }
             },
             {
+                liveUrl: "https://aortegadevpa.github.io/sistema-web-modular/",
+                repoUrl: "https://github.com/aortegadevpa/sistema-web-modular",
                 stack: ["HTML5 Semántico", "CSS3 Modular", "JavaScript (ES6+)", "Git", "GitHub Pull Requests"],
                 es: {
                     category: "Frontend & Colaboración",
@@ -1125,6 +1134,8 @@
                 }
             },
             {
+                liveUrl: "https://aortegadevpa.github.io/helpdesk-inventario-ti/",
+                repoUrl: "https://github.com/aortegadevpa/helpdesk-inventario-ti",
                 stack: ["HTML5", "Tailwind CSS", "JavaScript (ES6+)", "LocalStorage Persistence", "CSV Data Export"],
                 es: {
                     category: "Web App & Operaciones TI",
@@ -1204,6 +1215,30 @@
                 badge.textContent = tech;
                 stackContainer.appendChild(badge);
             });
+
+            const actionsContainer = document.getElementById('modal-actions');
+            actionsContainer.innerHTML = '';
+            const t = translations[currentLang];
+
+            if (project.liveUrl) {
+                const liveBtn = document.createElement('a');
+                liveBtn.href = project.liveUrl;
+                liveBtn.target = '_blank';
+                liveBtn.rel = 'noopener noreferrer';
+                liveBtn.className = 'inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-cyan-500 to-emerald-500 text-slate-950 font-bold text-xs sm:text-sm hover:brightness-110 transition-all';
+                liveBtn.innerHTML = `<i class="fa-solid fa-arrow-up-right-from-square"></i><span>${t.modal_live_demo}</span>`;
+                actionsContainer.appendChild(liveBtn);
+            }
+
+            if (project.repoUrl) {
+                const repoBtn = document.createElement('a');
+                repoBtn.href = project.repoUrl;
+                repoBtn.target = '_blank';
+                repoBtn.rel = 'noopener noreferrer';
+                repoBtn.className = 'inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-medium text-xs sm:text-sm border border-slate-700 transition-colors';
+                repoBtn.innerHTML = `<i class="fa-brands fa-github"></i><span>${t.modal_view_repo}</span>`;
+                actionsContainer.appendChild(repoBtn);
+            }
         }
 
         function closeProjectModal() {
