@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Angel Ortega | Desarrollador de Software & Automatización con IA</title>
-    <meta name="description" content="Portafolio profesional de Angel Ortega. Desarrollador de Software, Automatización con IA (n8n, Ollama) y Soporte Técnico TI en Panamá.">
+    <meta name="description" content="Portafolio profesional de Angel Ortega. Desarrollador de Software, Automatización con IA (n8n, Groq, PostgreSQL) y Soporte Técnico TI en Panamá.">
     <meta name="author" content="Angel Ortega">
     <!-- Open Graph / Vista previa al compartir enlace en WhatsApp y LinkedIn -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://aortegadevpa.github.io/">
     <meta property="og:title" content="Angel Ortega | Desarrollador de Software & Automatización con IA">
-    <meta property="og:description" content="Desarrollo Web, Aplicaciones en C#, Agentes de IA con n8n/Ollama y Soporte Técnico TI. Español, Portugués e Inglés.">
+    <meta property="og:description" content="Desarrollo Web, Aplicaciones en C#, Agentes de IA con n8n/Groq/PostgreSQL y Soporte Técnico TI. Español, Portugués e Inglés.">
     <meta name="theme-color" content="#070b14">
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -462,9 +462,9 @@
 
                         <div class="space-y-4">
                             <div class="flex flex-wrap gap-2">
-                                <span class="text-xs font-mono px-2.5 py-1 rounded-md bg-slate-800/90 text-cyan-300">n8n</span>
-                                <span class="text-xs font-mono px-2.5 py-1 rounded-md bg-slate-800/90 text-cyan-300">Ollama 3.1</span>
-                                <span class="text-xs font-mono px-2.5 py-1 rounded-md bg-slate-800/90 text-cyan-300">Meta Webhooks</span>
+                                <span class="text-xs font-mono px-2.5 py-1 rounded-md bg-slate-800/90 text-cyan-300">n8n AI Agent</span>
+                                <span class="text-xs font-mono px-2.5 py-1 rounded-md bg-slate-800/90 text-cyan-300">Groq LLM</span>
+                                <span class="text-xs font-mono px-2.5 py-1 rounded-md bg-slate-800/90 text-cyan-300">PostgreSQL</span>
                                 <span class="text-xs font-mono px-2.5 py-1 rounded-md bg-slate-800/90 text-cyan-300">Google Sheets</span>
                             </div>
 
@@ -810,8 +810,8 @@
                 proj_title: "Proyectos Destacados",
                 proj_subtitle: "Haz clic en cualquier proyecto para explorar el problema resuelto, la solución implementada y su arquitectura técnica.",
                 proj_view_details: "Ver arquitectura y detalles",
-                p1_title: "Chatbot Automatizado para WhatsApp Business",
-                p1_short: "Prototipo de atención al cliente y agendamiento automático de citas para barbería local usando IA local, webhooks y hojas de cálculo en la nube.",
+                p1_title: "Agente IA Automatizado para WhatsApp Business",
+                p1_short: "Agente conversacional con memoria persistente en PostgreSQL, modelo Groq y herramientas (Tool Calling) en Google Sheets para consultar y agendar citas automáticamente.",
                 p2_title: "Sistema Web Modular Colaborativo",
                 p2_short: "Desarrollo frontend estructurado con arquitectura multi-archivo en HTML5, CSS3 y JavaScript, enfocado en diseño responsivo y control de versiones en GitHub.",
                 p3_title: "Sistema de Monitoreo y Control de Ascensor (C#)",
@@ -885,8 +885,8 @@
                 proj_title: "Featured Projects",
                 proj_subtitle: "Click on any project to explore the problem solved, the implemented solution, and its technical architecture.",
                 proj_view_details: "View architecture & details",
-                p1_title: "Automated WhatsApp Business Chatbot",
-                p1_short: "Customer service and automated appointment scheduling prototype for a local barbershop using local LLMs, webhooks, and cloud spreadsheets.",
+                p1_title: "Automated WhatsApp Business AI Agent",
+                p1_short: "Conversational AI agent with persistent PostgreSQL memory, Groq LLM, and Google Sheets tool calling to check availability and schedule appointments automatically.",
                 p2_title: "Collaborative Modular Web System",
                 p2_short: "Structured frontend development with multi-file architecture in HTML5, CSS3, and JavaScript, focused on responsive design and GitHub version control.",
                 p3_title: "Elevator Monitoring & Dispatch Control System (C#)",
@@ -960,8 +960,8 @@
                 proj_title: "Projetos em Destaque",
                 proj_subtitle: "Clique em qualquer projeto para explorar o problema resolvido, a solução implementada e sua arquitetura técnica.",
                 proj_view_details: "Ver arquitetura e detalhes",
-                p1_title: "Chatbot Automatizado para WhatsApp Business",
-                p1_short: "Protótipo de atendimento ao cliente e agendamento automático de horários para barbearia local usando IA local, webhooks e planilhas na nuvem.",
+                p1_title: "Agente de IA Automatizado para WhatsApp Business",
+                p1_short: "Agente conversacional com memória persistente em PostgreSQL, modelo Groq e ferramentas (Tool Calling) no Google Sheets para consultar e agendar horários.",
                 p2_title: "Sistema Web Modular Colaborativo",
                 p2_short: "Desenvolvimento frontend estruturado com arquitetura multi-arquivo em HTML5, CSS3 e JavaScript, focado em design responsivo e controle de versão no GitHub.",
                 p3_title: "Sistema de Monitoramento e Controle de Elevador (C#)",
@@ -1004,27 +1004,28 @@
 
         const projectsData = [
             {
-                stack: ["n8n", "Ollama 3.1 (Local LLM)", "Meta Developers Webhooks", "WhatsApp Cloud API", "Google Sheets API"],
+                repoUrl: "https://github.com/aortegadevpa/chatbot-whatsapp-n8n-groq",
+                stack: ["n8n AI Agent", "Groq Chat Model", "Postgres Chat Memory", "WhatsApp Cloud API", "Google Sheets Tools"],
                 es: {
                     category: "IA & Automatización",
-                    title: "Chatbot Automatizado para WhatsApp Business",
-                    problem: "Una barbería local perdía clientes y tiempo operativo respondiendo manualmente consultas repetitivas sobre horarios, precios y disponibilidad de citas por WhatsApp.",
-                    solution: "Se diseñó un prototipo de agente conversacional automatizado capaz de interpretar lenguaje natural, consultar horarios disponibles en tiempo real y registrar reservas sin intervención manual ni costos recurrentes de APIs de IA externas.",
-                    architecture: "[Cliente WhatsApp] ➔ [Meta Cloud API Webhook] ➔ [Orquestador n8n] ➔ [Inferencia Local con Ollama 3.1] ➔ [Lectura/Escritura en Google Sheets] ➔ [Confirmación automática al cliente]"
+                    title: "Agente IA Automatizado para WhatsApp Business",
+                    problem: "Una barbería local perdía clientes y tiempo operativo respondiendo manualmente consultas repetitivas sobre horarios y disponibilidad de citas por WhatsApp, sin trazabilidad en las conversaciones.",
+                    solution: "Se implementó un Agente de IA en n8n impulsado por Groq con memoria conversacional persistente en PostgreSQL y herramientas conectadas (Tool Calling) para leer disponibilidad y registrar citas automáticamente en Google Sheets.",
+                    architecture: "[WhatsApp Trigger] ➔ [Filtro Texto] ➔ [AI Agent (Groq LLM + Postgres Memory + Tools: consultar_agenda / guardar_cita)] ➔ [Condicional If] ➔ [Confirmación WhatsApp]"
                 },
                 en: {
                     category: "AI & Automation",
-                    title: "Automated WhatsApp Business Chatbot",
-                    problem: "A local barbershop was losing clients and operational time by manually answering repetitive WhatsApp inquiries regarding business hours, pricing, and appointment availability.",
-                    solution: "Designed an automated conversational agent prototype capable of understanding natural language, checking real-time slot availability, and booking appointments without manual intervention or recurring external LLM API costs.",
-                    architecture: "[WhatsApp Client] ➔ [Meta Cloud API Webhook] ➔ [n8n Workflow Orchestrator] ➔ [Local Inference via Ollama 3.1] ➔ [Google Sheets Read/Write] ➔ [Automated Client Confirmation]"
+                    title: "Automated WhatsApp Business AI Agent",
+                    problem: "A local barbershop was losing clients and operational time manually answering repetitive WhatsApp inquiries about schedules and availability without persistent conversation context.",
+                    solution: "Built an n8n AI Agent powered by Groq with persistent PostgreSQL chat memory and connected tools (Tool Calling) to read availability and book appointments directly into Google Sheets.",
+                    architecture: "[WhatsApp Trigger] ➔ [Text Filter] ➔ [AI Agent (Groq LLM + Postgres Memory + Tools: check_schedule / save_booking)] ➔ [If Router] ➔ [WhatsApp Confirmation]"
                 },
                 pt: {
                     category: "IA & Automação",
-                    title: "Chatbot Automatizado para WhatsApp Business",
-                    problem: "Uma barbearia local perdia clientes e tempo operacional respondendo manualmente a dúvidas repetitivas sobre horários, preços e disponibilidade de agendamentos no WhatsApp.",
-                    solution: "Foi desenvolvido um protótipo de agente conversacional automatizado capaz de interpretar linguagem natural, consultar horários disponíveis em tempo real e registrar agendamentos sem intervenção manual.",
-                    architecture: "[Cliente WhatsApp] ➔ [Meta Cloud API Webhook] ➔ [Orquestrador n8n] ➔ [Inferência Local com Ollama 3.1] ➔ [Leitura/Escrita no Google Sheets] ➔ [Confirmação automática ao cliente]"
+                    title: "Agente de IA Automatizado para WhatsApp Business",
+                    problem: "Uma barbearia local perdia clientes e tempo operacional respondendo manualmente a dúvidas sobre horários e disponibilidade no WhatsApp sem contexto persistente.",
+                    solution: "Implementou-se um Agente de IA no n8n com Groq, memória persistente em PostgreSQL e ferramentas conectadas (Tool Calling) para consultar horários e registrar agendamentos no Google Sheets.",
+                    architecture: "[WhatsApp Trigger] ➔ [Filtro Texto] ➔ [AI Agent (Groq LLM + Postgres Memory + Tools: consultar_agenda / guardar_cita)] ➔ [Condicional If] ➔ [Confirmação WhatsApp]"
                 }
             },
             {
