@@ -170,7 +170,6 @@
                 <a href="#inicio" data-i18n="nav_home" class="hover:text-cyan-400 transition-colors">Inicio</a>
                 <a href="#sobre-mi" data-i18n="nav_about" class="hover:text-cyan-400 transition-colors">Sobre mí</a>
                 <a href="#proyectos" data-i18n="nav_projects" class="hover:text-cyan-400 transition-colors">Proyectos</a>
-                <a href="#habilidades" data-i18n="nav_skills" class="hover:text-cyan-400 transition-colors">Habilidades</a>
                 <a href="#contacto" data-i18n="nav_contact" class="hover:text-cyan-400 transition-colors">Contacto</a>
             </div>
 
@@ -200,7 +199,6 @@
             <a href="#inicio" data-i18n="nav_home" class="mobile-link block px-4 py-2.5 rounded-xl text-sm font-medium text-slate-200 hover:bg-slate-800 hover:text-cyan-400">Inicio</a>
             <a href="#sobre-mi" data-i18n="nav_about" class="mobile-link block px-4 py-2.5 rounded-xl text-sm font-medium text-slate-200 hover:bg-slate-800 hover:text-cyan-400">Sobre mí</a>
             <a href="#proyectos" data-i18n="nav_projects" class="mobile-link block px-4 py-2.5 rounded-xl text-sm font-medium text-slate-200 hover:bg-slate-800 hover:text-cyan-400">Proyectos</a>
-            <a href="#habilidades" data-i18n="nav_skills" class="mobile-link block px-4 py-2.5 rounded-xl text-sm font-medium text-slate-200 hover:bg-slate-800 hover:text-cyan-400">Habilidades</a>
             <a href="#contacto" data-i18n="nav_contact" class="mobile-link block px-4 py-2.5 rounded-xl text-sm font-medium text-slate-200 hover:bg-slate-800 hover:text-cyan-400">Contacto</a>
         </div>
     </header>
@@ -512,23 +510,23 @@
                         </div>
                     </article>
 
-                    <!-- Proyecto 3: Juego Arcade en C# -->
+                    <!-- Proyecto 3: Sistema de Monitoreo y Control de Ascensor en C# -->
                     <article onclick="openProjectModal(2)" class="glass-card rounded-2xl p-6 flex flex-col justify-between cursor-pointer group fade-in-up">
                         <div>
                             <div class="flex items-center justify-between mb-5">
                                 <div class="w-12 h-12 rounded-xl bg-indigo-500/15 border border-indigo-500/30 text-indigo-400 flex items-center justify-center text-xl">
-                                    <i class="fa-solid fa-gamepad"></i>
+                                    <i class="fa-solid fa-elevator"></i>
                                 </div>
                                 <span class="text-xs font-mono px-2.5 py-1 rounded-lg bg-slate-900/90 text-indigo-300 border border-slate-800">
-                                    Desktop C#
+                                    Desktop C# • .NET
                                 </span>
                             </div>
 
                             <h3 class="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors mb-2.5" data-i18n="p3_title">
-                                Juego Arcade de Rescate en C#
+                                Sistema de Monitoreo y Control de Ascensor (C#)
                             </h3>
                             <p class="text-slate-400 text-sm leading-relaxed mb-5" data-i18n="p3_short">
-                                Aplicación de escritorio en Windows Forms con física de movimiento, detección de colisiones, sistema de vidas, niveles progresivos y obstáculos dinámicos.
+                                Simulador de despacho de ascensor en Windows Forms con algoritmo SCAN intercalado, generación procedural de interfaz por arreglos, filtros de rango/paridad y estados en tiempo real.
                             </p>
                         </div>
 
@@ -536,7 +534,7 @@
                             <div class="flex flex-wrap gap-2">
                                 <span class="text-xs font-mono px-2.5 py-1 rounded-md bg-slate-800/90 text-cyan-300">C#</span>
                                 <span class="text-xs font-mono px-2.5 py-1 rounded-md bg-slate-800/90 text-cyan-300">Windows Forms</span>
-                                <span class="text-xs font-mono px-2.5 py-1 rounded-md bg-slate-800/90 text-cyan-300">Visual Studio</span>
+                                <span class="text-xs font-mono px-2.5 py-1 rounded-md bg-slate-800/90 text-cyan-300">Algoritmo SCAN</span>
                                 <span class="text-xs font-mono px-2.5 py-1 rounded-md bg-slate-800/90 text-cyan-300">POO</span>
                             </div>
 
@@ -586,7 +584,7 @@
             </div>
         </section>
 
-        <!-- 5. SECCIÓN CONTACTO Y ACCIONES RÁPIDAS -->
+        <!-- 4. SECCIÓN CONTACTO Y ACCIONES RÁPIDAS -->
         <section id="contacto" class="py-20 border-t border-slate-800/70">
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
@@ -594,7 +592,7 @@
                     <!-- Columna Izquierda: Info directa y botones utilitarios -->
                     <div class="lg:col-span-5 space-y-6 fade-in-up">
                         <div>
-                            <span class="text-xs font-mono uppercase tracking-widest text-cyan-400" data-i18n="contact_tag">04. Conectemos</span>
+                            <span class="text-xs font-mono uppercase tracking-widest text-cyan-400" data-i18n="contact_tag">03. Conectemos</span>
                             <h2 class="text-3xl font-bold text-white mt-1" data-i18n="contact_title">Contacto Profesional</h2>
                             <p class="text-slate-300 text-sm sm:text-base mt-3 leading-relaxed" data-i18n="contact_desc">
                                 ¿Buscas talento para desarrollo de software, integración de APIs o automatización inteligente? Envíame un mensaje o copia mis datos de contacto directo.
@@ -781,7 +779,6 @@
                 nav_home: "Inicio",
                 nav_about: "Sobre mí",
                 nav_projects: "Proyectos",
-                nav_skills: "Habilidades",
                 nav_contact: "Contacto",
                 hero_badge: "Disponible para pasantías y proyectos TI • Panamá",
                 hero_role: "Desarrollador de Software & Automatización con IA",
@@ -817,28 +814,11 @@
                 p1_short: "Prototipo de atención al cliente y agendamiento automático de citas para barbería local usando IA local, webhooks y hojas de cálculo en la nube.",
                 p2_title: "Sistema Web Modular Colaborativo",
                 p2_short: "Desarrollo frontend estructurado con arquitectura multi-archivo en HTML5, CSS3 y JavaScript, enfocado en diseño responsivo y control de versiones en GitHub.",
-                p3_title: "Juego Arcade de Rescate en C#",
-                p3_short: "Aplicación de escritorio en Windows Forms con física de movimiento, detección de colisiones, sistema de vidas, niveles progresivos y obstáculos dinámicos.",
+                p3_title: "Sistema de Monitoreo y Control de Ascensor (C#)",
+                p3_short: "Simulador de despacho de ascensor en Windows Forms con algoritmo SCAN intercalado, generación procedural de interfaz por arreglos, filtros de rango/paridad y estados en tiempo real.",
                 p4_title: "Sistema HelpDesk & Inventario TI",
                 p4_short: "Plataforma web para gestión de tickets de soporte técnico, control de mantenimiento preventivo de equipos, métricas en tiempo real y exportación de reportes CSV.",
-                skills_tag: "03. Stack Tecnológico",
-                skills_title: "Habilidades Técnicas e Idiomas",
-                skill_cat_1: "Lenguajes & Frontend",
-                skill_cat_2: "Automatización & IA",
-                skill_cat_3: "Herramientas & Cloud",
-                skill_cat_support: "Soporte Técnico & Mantenimiento",
-                sup_tag_1: "Mantenimiento Preventivo y Correctivo",
-                sup_tag_2: "Diagnóstico Hardware & Software",
-                sup_tag_3: "Redes & Conectividad (Cisco)",
-                sup_tag_4: "Soporte a Usuarios & OS",
-                skill_cat_4: "Idiomas",
-                lang_es_name: "Español",
-                lang_es_lvl: "Nativo",
-                lang_pt_name: "Portugués",
-                lang_pt_lvl: "Fluido",
-                lang_en_name: "Inglés",
-                lang_en_lvl: "Conversacional / Profesional",
-                contact_tag: "04. Conectemos",
+                contact_tag: "03. Conectemos",
                 contact_title: "Contacto Profesional",
                 contact_desc: "¿Buscas talento para desarrollo de software, integración de APIs o automatización inteligente? Envíame un mensaje o copia mis datos de contacto directo.",
                 contact_loc_label: "Ubicación",
@@ -859,7 +839,7 @@
                 modal_arch_lbl: "Arquitectura & Flujo Técnico",
                 modal_stack_lbl: "Stack Tecnológico",
                 modal_live_demo: "Probar Demo en Vivo",
-                modal_view_repo: "Ver Repositorio",
+                modal_view_repo: "Ver Código y Capturas en GitHub",
                 modal_close: "Cerrar",
                 toast_email_title: "Correo copiado",
                 toast_email_msg: "aortega.devpa@gmail.com copiado al portapapeles.",
@@ -874,7 +854,6 @@
                 nav_home: "Home",
                 nav_about: "About",
                 nav_projects: "Projects",
-                nav_skills: "Skills",
                 nav_contact: "Contact",
                 hero_badge: "Available for IT internships & projects • Panama",
                 hero_role: "Software Developer & AI Automation Specialist",
@@ -910,28 +889,11 @@
                 p1_short: "Customer service and automated appointment scheduling prototype for a local barbershop using local LLMs, webhooks, and cloud spreadsheets.",
                 p2_title: "Collaborative Modular Web System",
                 p2_short: "Structured frontend development with multi-file architecture in HTML5, CSS3, and JavaScript, focused on responsive design and GitHub version control.",
-                p3_title: "C# Arcade Rescue Game",
-                p3_short: "Windows Forms desktop application built in Visual Studio featuring movement physics, collision detection, lives system, progressive levels, and dynamic obstacles.",
+                p3_title: "Elevator Monitoring & Dispatch Control System (C#)",
+                p3_short: "Windows Forms elevator simulator featuring interleaved SCAN dispatching, procedural array-generated UI, floor range/parity filters, and real-time cabin state indicators.",
                 p4_title: "IT HelpDesk & Asset Inventory System",
                 p4_short: "Web platform for IT support ticket management, preventive PC maintenance tracking, real-time KPIs, and CSV report generation.",
-                skills_tag: "03. Tech Stack",
-                skills_title: "Technical Skills & Languages",
-                skill_cat_1: "Languages & Frontend",
-                skill_cat_2: "Automation & AI",
-                skill_cat_3: "Tools & Cloud",
-                skill_cat_support: "IT Support & Maintenance",
-                sup_tag_1: "Preventive & Corrective Maintenance",
-                sup_tag_2: "Hardware & Software Diagnostics",
-                sup_tag_3: "Networking & Connectivity (Cisco)",
-                sup_tag_4: "End-User Support & OS Setup",
-                skill_cat_4: "Languages",
-                lang_es_name: "Spanish",
-                lang_es_lvl: "Native",
-                lang_pt_name: "Portuguese",
-                lang_pt_lvl: "Fluent",
-                lang_en_name: "English",
-                lang_en_lvl: "Conversational / Professional",
-                contact_tag: "04. Let's Connect",
+                contact_tag: "03. Let's Connect",
                 contact_title: "Professional Contact",
                 contact_desc: "Looking for talent in software development, API integration, or smart automation? Send me a message or copy my direct contact details.",
                 contact_loc_label: "Location",
@@ -952,7 +914,7 @@
                 modal_arch_lbl: "Architecture & Technical Flow",
                 modal_stack_lbl: "Tech Stack",
                 modal_live_demo: "Live Demo",
-                modal_view_repo: "View Repository",
+                modal_view_repo: "View Code & Screenshots on GitHub",
                 modal_close: "Close",
                 toast_email_title: "Email copied",
                 toast_email_msg: "aortega.devpa@gmail.com copied to clipboard.",
@@ -967,7 +929,6 @@
                 nav_home: "Início",
                 nav_about: "Sobre mim",
                 nav_projects: "Projetos",
-                nav_skills: "Habilidades",
                 nav_contact: "Contato",
                 hero_badge: "Disponível para estágios e projetos de TI • Panamá",
                 hero_role: "Desenvolvedor de Software & Automação com IA",
@@ -1003,28 +964,11 @@
                 p1_short: "Protótipo de atendimento ao cliente e agendamento automático de horários para barbearia local usando IA local, webhooks e planilhas na nuvem.",
                 p2_title: "Sistema Web Modular Colaborativo",
                 p2_short: "Desenvolvimento frontend estruturado com arquitetura multi-arquivo em HTML5, CSS3 e JavaScript, focado em design responsivo e controle de versão no GitHub.",
-                p3_title: "Jogo Arcade de Resgate em C#",
-                p3_short: "Aplicação desktop em Windows Forms desenvolvida no Visual Studio com física de movimento, detecção de colisões, sistema de vidas, níveis progressivos e obstáculos dinâmicos.",
+                p3_title: "Sistema de Monitoramento e Controle de Elevador (C#)",
+                p3_short: "Simulador de despacho de elevador em Windows Forms com algoritmo SCAN intercalado, geração procedural de interface por arrays, filtros de andar/paridade e estados em tempo real.",
                 p4_title: "Sistema HelpDesk & Inventário de TI",
                 p4_short: "Plataforma web para gestão de chamados de suporte técnico, controle de manutenção preventiva de equipamentos, métricas em tempo real e exportação CSV.",
-                skills_tag: "03. Stack Tecnológico",
-                skills_title: "Habilidades Técnicas e Idiomas",
-                skill_cat_1: "Linguagens & Frontend",
-                skill_cat_2: "Automação & IA",
-                skill_cat_3: "Ferramentas & Cloud",
-                skill_cat_support: "Suporte Técnico & Manutenção",
-                sup_tag_1: "Manutenção Preventiva e Corretiva",
-                sup_tag_2: "Diagnóstico Hardware & Software",
-                sup_tag_3: "Redes & Conectividade (Cisco)",
-                sup_tag_4: "Suporte ao Usuário & Sistemas",
-                skill_cat_4: "Idiomas",
-                lang_es_name: "Espanhol",
-                lang_es_lvl: "Nativo",
-                lang_pt_name: "Português",
-                lang_pt_lvl: "Fluente",
-                lang_en_name: "Inglês",
-                lang_en_lvl: "Conversacional / Profissional",
-                contact_tag: "04. Vamos Conectar",
+                contact_tag: "03. Vamos Conectar",
                 contact_title: "Contato Profissional",
                 contact_desc: "Procurando talentos para desenvolvimento de software, integração de APIs ou automação inteligente? Envie uma mensagem ou copie meus dados de contato.",
                 contact_loc_label: "Localização",
@@ -1045,7 +989,7 @@
                 modal_arch_lbl: "Arquitetura & Fluxo Técnico",
                 modal_stack_lbl: "Stack Tecnológico",
                 modal_live_demo: "Ver Demo ao Vivo",
-                modal_view_repo: "Ver Repositório",
+                modal_view_repo: "Ver Código e Capturas no GitHub",
                 modal_close: "Fechar",
                 toast_email_title: "E-mail copiado",
                 toast_email_msg: "aortega.devpa@gmail.com copiado para a área de transferência.",
@@ -1110,27 +1054,28 @@
                 }
             },
             {
-                stack: ["C#", ".NET Windows Forms", "Visual Studio", "Programación Orientada a Objetos", "Event-Driven Logic"],
+                repoUrl: "https://github.com/aortegadevpa/simulador-elevador-csharp",
+                stack: ["C#", ".NET Windows Forms", "Visual Studio", "Algoritmo SCAN", "POO & Arreglos Dinámicos"],
                 es: {
-                    category: "Desarrollo Desktop C#",
-                    title: "Juego Arcade de Rescate en C#",
-                    problem: "Consolidar conceptos avanzados de programación orientada a objetos, manejo de eventos en tiempo real y optimización de renderizado en entornos de escritorio.",
-                    solution: "Desarrollo de un videojuego arcade completo en Windows Forms con bucle de juego controlado por temporizadores, física de desplazamiento, detección precisa de colisiones, sistema de vidas y dificultad escalable por niveles.",
-                    architecture: "[Game Loop Timer (60 FPS)] ➔ [Input Handler (Teclado)] ➔ [Motor de Física y Colisiones (Bounds)] ➔ [Gestor de Estado (Vidas / Puntuación / Niveles)] ➔ [Renderizado UI]"
+                    category: "Desarrollo Desktop C# • .NET",
+                    title: "Sistema de Monitoreo y Control de Ascensor (C#)",
+                    problem: "Simular con precisión el despacho inteligente de un ascensor de 11 niveles evitando recorridos ineficientes, bloqueos de llamadas simultáneas de subida/bajada y código repetitivo en la interfaz.",
+                    solution: "Aplicación de escritorio en C# (Windows Forms) con generación procedural de controles mediante arreglos y ciclos for, cálculo matemático de piso por coordenada Y, algoritmo SCAN intercalado (subidas/bajadas), filtros de rango/paridad y estados visuales (Verde/Amarillo/Rojo).",
+                    architecture: "[Generación UI por Arreglos] ➔ [Validador de Rango y Paridad] ➔ [Planificador SCAN Intercalado] ➔ [Timer de Desplazamiento & Cálculo Matemático de Piso] ➔ [Estados Visuales]"
                 },
                 en: {
-                    category: "Desktop Dev C#",
-                    title: "C# Arcade Rescue Game",
-                    problem: "Consolidate advanced object-oriented programming concepts, real-time event handling, and rendering optimization within desktop environments.",
-                    solution: "Developed a complete arcade video game in Windows Forms featuring a timer-driven game loop, movement physics, accurate bounding-box collision detection, a lives system, and progressive level difficulty.",
-                    architecture: "[Game Loop Timer] ➔ [Keyboard Input Handler] ➔ [Physics & Collision Engine] ➔ [State Manager (Lives / Score / Levels)] ➔ [Windows Forms UI Rendering]"
+                    category: "Desktop Dev C# • .NET",
+                    title: "Elevator Monitoring & Dispatch Control System (C#)",
+                    problem: "Accurately simulate intelligent elevator dispatching across 11 levels while preventing inefficient travel routes, simultaneous up/down call starvation, and hardcoded UI repetition.",
+                    solution: "Desktop C# (Windows Forms) application featuring procedural UI generation via arrays and for-loops, mathematical Y-coordinate floor tracking, interleaved SCAN scheduling, range/parity filters, and real-time cabin state colors (Green/Yellow/Red).",
+                    architecture: "[Array-Based Procedural UI] ➔ [Range & Parity Validator] ➔ [Interleaved SCAN Dispatcher] ➔ [Movement Timer & Mathematical Floor Calculation] ➔ [Cabin State Monitor]"
                 },
                 pt: {
-                    category: "Desenvolvimento Desktop C#",
-                    title: "Jogo Arcade de Resgate em C#",
-                    problem: "Consolidar conceitos avançados de programação orientada a objetos, tratamento de eventos em tempo real e otimização de renderização em ambientes desktop.",
-                    solution: "Desenvolvimento de um jogo arcade completo em Windows Forms com loop controlado por timers, física de movimento, detecção precisa de colisões, sistema de vidas e dificuldade progressiva por níveis.",
-                    architecture: "[Game Loop Timer] ➔ [Input Handler (Teclado)] ➔ [Physics & Collision Engine] ➔ [State Manager (Vidas / Pontuação / Níveis)] ➔ [Renderização UI]"
+                    category: "Desenvolvimento Desktop C# • .NET",
+                    title: "Sistema de Monitoramento e Controle de Elevador (C#)",
+                    problem: "Simular com precisão o despacho inteligente de um elevador de 11 níveis evitando percursos ineficientes, bloqueio de chamadas simultâneas e repetição de código na interface.",
+                    solution: "Aplicação desktop em C# (Windows Forms) com geração procedural de controles via arrays e laços for, cálculo matemático de andar por coordenada Y, algoritmo SCAN intercalado, filtros de faixa/paridade e estados visuais (Verde/Amarelo/Vermelho).",
+                    architecture: "[Geração UI por Arrays] ➔ [Validador de Faixa e Paridade] ➔ [Planejador SCAN Intercalado] ➔ [Timer de Deslocamento & Cálculo Matemático de Andar] ➔ [Monitor de Estados]"
                 }
             },
             {
