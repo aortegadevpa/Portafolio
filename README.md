@@ -32,14 +32,6 @@ Servicios & Despliegue: FormSubmit (formularios estáticos), GitHub Pages.
 └── README.md       # Documentación del repositorio
 
 
-🚀 Despliegue en GitHub Pages
-
-Sube index.html y README.md a tu repositorio público aortegadevpa.github.io.
-
-Ve a Settings → Pages en el repositorio y verifica que la rama main esté seleccionada.
-
-Abre https://aortegadevpa.github.io y envía un mensaje de prueba desde el formulario de contacto para activar la recepción en aortega.devpa@gmail.com.
-
 📬 Contacto
 
 Nombre: Angel Ortega
